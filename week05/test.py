@@ -6,3 +6,4 @@ match value:
         print("two")
     case _:
         print("other")
+print(value)
