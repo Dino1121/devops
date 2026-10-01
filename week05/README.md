@@ -21,3 +21,12 @@ docker rm web
 ## GitHub 작업 흐름
 Issue → Branch → Commit/Push → Pull Request → Merge
 
+## nginx1
+Welcom to nginx1
+
+## nginx2
+Welcom to nginx2
+
+## nginx3
+Welcom to nginx3
+
