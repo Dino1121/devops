@@ -11,6 +11,7 @@
 | 3주차 | [셸 스크립팅](./week03/qwen-web) |
 | 4주차 | [자동화, 협업 및 네트워크](./week04/) |
 | 5주차 | [Docker](./week05/) |
+| 6주차 | [Dockerfile 및 이미지 배포](./week06/) |
 
 ## DevOps란?
 
