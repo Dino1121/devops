@@ -1,0 +1,3 @@
+FROM ghcr.io/dino1121/guestbook:v1
+ENV APP_TITLE="Custom 방명록" \
+    THEME_COLOR="#7C9A82"
