@@ -126,4 +126,8 @@ Dockerfile.custom 내용:
 
 ## 9. 친구 이미지 교환
 
-친구 이미지 실행 및 결과 캡처는 실제 이미지 교환 실습 시 추가할 예정이다.
+친구 이미지 대신 교수님이 제공한 이미지를 사용하여 이미지 교환 실습을 진행하였다.
+
+    docker run -d -p 9090:5000 --name friend nearykam/inhatc-devops-guestbook:v1
+
+![이미지 교환 실행 결과](images/week06_09_friend_image.png)
