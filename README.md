@@ -12,7 +12,7 @@
 | 4주차 | [자동화, 협업 및 네트워크](./week04/) |
 | 5주차 | [Docker](./week05/) |
 | 6주차 | [Dockerfile 및 이미지 배포](./week06/) |
-
+| 7주차 | [Docker Compose 및 컨테이너 오케스트레이션](./week07/) |
 ## DevOps란?
 
 DevOps는 **Development(개발) + Operations(운영)**의 합성어이다.
