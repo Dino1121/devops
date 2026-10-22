@@ -187,3 +187,37 @@ docker compose watch --no-up
 - `docker compose down`은 명명된 볼륨을 유지하지만 `down -v`는 볼륨까지 제거한다.
 - `develop.watch`를 이용하면 코드 변경 시 재빌드를 자동화할 수 있다.
 
+
+---
+
+## 9. web 컨테이너 3개 자동 유지 실습
+
+### 문제
+`docker compose up -d --scale web=3`으로 컨테이너 3개를 실행하더라도,
+하나를 수동 정지하면 `restart: unless-stopped` 설정만으로는
+항상 3개를 유지할 수 없다.
+
+### 해결 방법
+3주차에 배운 셸 스크립트의 반복문과 조건문,
+7주차 Docker Compose 명령어를 결합하였다.
+
+- 스크립트: [maintain-web.sh](../guestbook/maintain-web.sh)
+- 5초마다 실행 중인 web 컨테이너 개수 확인
+- 3개가 아니면 `docker compose up -d --scale web=3` 실행
+
+### 실험 결과
+1. web 컨테이너 3개가 Healthy 상태임을 확인하였다.
+2. `docker stop guestbook-web-2`로 컨테이너 하나를 정지시켰다.
+3. 감시 스크립트에서 실행 개수가 3개에서 2개로 감소한 것을 감지하였다.
+4. Docker Compose로 자동 복구한 뒤 다시 3개가 Healthy 상태임을 확인하였다.
+
+### 장점, 단점 및 한계
+- 장점: 별도의 도구 없이 Bash와 Docker Compose로 구현 가능하다.
+- 단점: 5초 간격으로 검사하므로 장애 발생 직후 즉시 복구되지는 않는다.
+- 한계: 감시 스크립트가 종료되면 자동 복구도 중단된다.
+- 한계: 컨테이너 개수만 검사하므로 실행 중이지만 Unhealthy인 컨테이너는 감지하지 못한다.
+- 한계: Docker 엔진이나 호스트 자체의 장애는 해결할 수 없다.
+
+### GitHub 협업 기록
+- Issue: https://github.com/Dino1121/devops/issues/7
+- Pull Request: https://github.com/Dino1121/devops/pull/8
