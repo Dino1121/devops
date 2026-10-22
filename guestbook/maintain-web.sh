@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")" || exit 1
+
 while true
 do
     COUNT=$(docker compose ps --status running -q web | wc -l)
