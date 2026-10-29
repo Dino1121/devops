@@ -13,6 +13,7 @@
 | 5주차 | [Docker](./week05/) |
 | 6주차 | [Dockerfile 및 이미지 배포](./week06/) |
 | 7주차 | [Docker Compose 및 컨테이너 오케스트레이션](./week07/) |
+| 9주차 | [Kubernetes 실습](./week09/) |
 ## DevOps란?
 
 DevOps는 **Development(개발) + Operations(운영)**의 합성어이다.
