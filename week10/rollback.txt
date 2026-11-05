@@ -1,0 +1,33 @@
+=== BEFORE ROLLBACK ===
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+guestbook   5/5     5            5           7d
+ghcr.io/dino1121/guestbook:v2
+deployment.apps/guestbook 
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+3         <none>
+
+deployment.apps/guestbook rolled back
+deployment "guestbook" successfully rolled out
+=== AFTER ROLLBACK ===
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+guestbook   5/5     5            5           7d
+NAME                         READY   STATUS        RESTARTS   AGE
+guestbook-6d4d5bddfd-4t6hg   1/1     Terminating   0          102s
+guestbook-6d4d5bddfd-h9gs9   1/1     Terminating   0          102s
+guestbook-6d4d5bddfd-jc754   1/1     Terminating   0          102s
+guestbook-6d4d5bddfd-vhglh   1/1     Terminating   0          95s
+guestbook-6d4d5bddfd-whbbp   1/1     Terminating   0          94s
+guestbook-7595bb7959-49cgx   1/1     Running       0          12s
+guestbook-7595bb7959-9qtdb   1/1     Running       0          13s
+guestbook-7595bb7959-bgsl9   1/1     Running       0          12s
+guestbook-7595bb7959-fh2zn   1/1     Running       0          13s
+guestbook-7595bb7959-kmflr   1/1     Running       0          13s
+ghcr.io/dino1121/guestbook:v1
+deployment.apps/guestbook 
+REVISION  CHANGE-CAUSE
+1         <none>
+3         <none>
+4         <none>
+

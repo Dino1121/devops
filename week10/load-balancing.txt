@@ -1,0 +1,16 @@
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-xdd92</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-xdd92</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-52lc6</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-s78bm</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-xdd92</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-wx5zb</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-z968d</span>
+      <span class="badge">Pod/Host: guestbook-7595bb7959-s78bm</span>
+pod "lb-check" deleted from default namespace
