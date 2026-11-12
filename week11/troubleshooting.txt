@@ -1,0 +1,66 @@
+=== 1. get: Pod 상태 확인 ===
+NAME                         READY   STATUS    RESTARTS   AGE
+guestbook-74b5cd757c-cksgc   1/1     Running   0          100s
+guestbook-74b5cd757c-dd4zv   1/1     Running   0          106s
+guestbook-74b5cd757c-jfwr2   1/1     Running   0          100s
+guestbook-74b5cd757c-lxz6b   1/1     Running   0          106s
+guestbook-74b5cd757c-td6fg   1/1     Running   0          106s
+
+=== 2. describe: Pod 설정 및 이벤트 확인 ===
+      cpu:      100m
+      memory:   64Mi
+    Liveness:   http-get http://:5000/healthz delay=5s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  http-get http://:5000/readyz delay=3s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Environment Variables from:
+      guestbook-config  ConfigMap  Optional: false
+      guestbook-secret  Secret     Optional: false
+    Environment:        <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2fxnr (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-2fxnr:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  100s  default-scheduler  Successfully assigned default/guestbook-74b5cd757c-cksgc to minikube
+  Normal  Pulled     100s  kubelet            spec.containers{guestbook}: Container image "ghcr.io/dino1121/guestbook:v1" already present on machine and can be accessed by the pod
+  Normal  Created    99s   kubelet            spec.containers{guestbook}: Container created
+  Normal  Started    99s   kubelet            spec.containers{guestbook}: Container started
+
+=== 3. logs: 애플리케이션 로그 확인 ===
+10.244.0.1 - - [12/Nov/2026 01:34:57] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:01] "GET /healthz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:02] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:07] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:11] "GET /healthz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:12] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:17] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:21] "GET /healthz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:22] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:27] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:31] "GET /healthz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:32] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:37] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:41] "GET /healthz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:42] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:47] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:51] "GET /healthz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:52] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:35:57] "GET /readyz HTTP/1.1" 200 -
+10.244.0.1 - - [12/Nov/2026 01:36:01] "GET /healthz HTTP/1.1" 200 -

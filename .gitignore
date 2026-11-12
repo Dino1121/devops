@@ -1,3 +1,4 @@
 *:Zone.Identifier
 *:Zone.Identifier
 .env
+guestbook/k8s/secret.yaml

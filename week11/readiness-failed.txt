@@ -1,0 +1,6 @@
+NAME                         READY   STATUS    RESTARTS   AGE
+guestbook-74b5cd757c-4r7c5   0/1     Running   0          3m2s
+guestbook-74b5cd757c-8dh5v   0/1     Running   0          2m56s
+guestbook-74b5cd757c-nnbbd   0/1     Running   0          3m2s
+guestbook-74b5cd757c-v4tcf   0/1     Running   0          2m56s
+guestbook-74b5cd757c-x72d8   0/1     Running   0          3m2s

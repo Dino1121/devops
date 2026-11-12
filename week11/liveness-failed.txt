@@ -1,0 +1,6 @@
+NAME                         READY   STATUS    RESTARTS      AGE
+guestbook-695bfbd5b9-67zzl   1/1     Running   1 (20s ago)   65s
+guestbook-695bfbd5b9-dcnc5   1/1     Running   1 (18s ago)   58s
+guestbook-695bfbd5b9-jnhtz   1/1     Running   1 (25s ago)   65s
+guestbook-695bfbd5b9-mczmq   1/1     Running   1 (25s ago)   65s
+guestbook-695bfbd5b9-v8lkw   1/1     Running   1 (18s ago)   59s

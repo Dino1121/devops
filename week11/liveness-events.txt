@@ -1,0 +1,15 @@
+69s         Normal    Killing                   pod/guestbook-74b5cd757c-nnbbd    Stopping container guestbook
+63s         Normal    Killing                   pod/guestbook-74b5cd757c-x72d8    Stopping container guestbook
+63s         Normal    Killing                   pod/guestbook-74b5cd757c-4r7c5    Stopping container guestbook
+62s         Normal    Killing                   pod/guestbook-74b5cd757c-v4tcf    Stopping container guestbook
+57s         Normal    Killing                   pod/guestbook-74b5cd757c-8dh5v    Stopping container guestbook
+19s         Normal    Killing                   pod/guestbook-695bfbd5b9-mczmq    Container guestbook failed liveness probe, will be restarted
+19s         Warning   Unhealthy                 pod/guestbook-695bfbd5b9-mczmq    Liveness probe failed: HTTP probe failed with statuscode: 404
+19s         Normal    Killing                   pod/guestbook-695bfbd5b9-jnhtz    Container guestbook failed liveness probe, will be restarted
+19s         Warning   Unhealthy                 pod/guestbook-695bfbd5b9-jnhtz    Liveness probe failed: HTTP probe failed with statuscode: 404
+14s         Warning   Unhealthy                 pod/guestbook-695bfbd5b9-67zzl    Liveness probe failed: HTTP probe failed with statuscode: 404
+14s         Normal    Killing                   pod/guestbook-695bfbd5b9-67zzl    Container guestbook failed liveness probe, will be restarted
+12s         Normal    Killing                   pod/guestbook-695bfbd5b9-v8lkw    Container guestbook failed liveness probe, will be restarted
+12s         Warning   Unhealthy                 pod/guestbook-695bfbd5b9-dcnc5    Liveness probe failed: HTTP probe failed with statuscode: 404
+12s         Normal    Killing                   pod/guestbook-695bfbd5b9-dcnc5    Container guestbook failed liveness probe, will be restarted
+12s         Warning   Unhealthy                 pod/guestbook-695bfbd5b9-v8lkw    Liveness probe failed: HTTP probe failed with statuscode: 404
