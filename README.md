@@ -16,6 +16,7 @@
 | 9주차 | [Kubernetes 실습](./week09/) |
 | 10주차 | [Kubernetes 배포와 서비스](./week10/) |
 | 11주차 | [Kubernetes 설정과 상태 점검](./week11/) |
+| 12주차 | [GitHub Actions 및 CI 자동화](./week12/) |
 ## DevOps란?
 
 DevOps는 **Development(개발) + Operations(운영)**의 합성어이다.
