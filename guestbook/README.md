@@ -113,3 +113,63 @@ docker compose down -v      # 볼륨까지 삭제
 | `REDIS_HOST` | (없음) | 있으면 Redis 모드 |
 | `REDIS_PORT` | 6379 | |
 | `REDIS_PASSWORD` | (없음) | |
+
+---
+
+## 아키텍처
+
+사용자 → Kubernetes Service → Guestbook Pods → Redis
+
+## 기술 스택
+
+- Python / Flask
+- Redis
+- Docker / Docker Compose
+- Kubernetes / Minikube
+- GitHub Actions / GHCR
+- Argo CD
+
+## Kubernetes 실행
+
+저장소 루트에서 실행한다.
+
+```bash
+minikube start --driver=docker
+kubectl apply -f guestbook/k8s
+minikube service guestbook
+```
+
+guestbook-secret은 별도로 생성해야 한다.
+실제 비밀번호는 Git에 저장하지 않는다.
+
+## CI/CD 및 GitOps 배포
+
+1. 소스 코드 수정
+2. Pull Request 생성 및 CI 검사
+3. main 브랜치에 Merge
+4. GitHub Actions를 통한 이미지 빌드 및 GHCR 게시
+5. deployment.yaml의 이미지 태그 변경
+6. PR 생성 및 Merge
+7. Argo CD를 통한 자동 배포
+
+## Argo CD
+
+- automated: 자동 동기화
+- selfHeal: Git에 선언된 상태로 복구
+- prune: Git에서 삭제된 리소스를 클러스터에서도 삭제
+
+## 트러블슈팅
+
+### Readiness Probe 503 오류
+
+방명록 Pod에서 Redis 연결을 직접 검사하고,
+Deployment를 재시작하여 정상 상태로 복구하였다.
+
+### PR Merge 차단
+
+Branch Protection에 의해 CI 검사가 완료되기 전까지
+Merge가 제한되었다. 검사 통과 후 Merge를 진행하였다.
+
+## 실습 기록
+
+- [13주차 GitOps 실습](../week13/)
