@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: guestbook
-          image: ghcr.io/dino1121/guestbook:v1
+          image: ghcr.io/dino1121/guestbook:05b6745
           ports:
             - containerPort: 5000
           envFrom:
