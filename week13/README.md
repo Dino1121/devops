@@ -47,3 +47,15 @@ Git에서 ConfigMap을 삭제하여 클러스터에서도 자동으로 삭제되
 ## 7. 최종 실행 결과
 
 ![Guestbook](./images/08-guestbook-cicd.png)
+
+## 8. GitOps 핵심 개념 정리
+
+| 개념 | 설명 |
+|---|---|
+| Desired State | Git에 선언된 목표 상태 |
+| Actual State | 클러스터의 현재 상태 |
+| Sync | Git과 클러스터 상태 동기화 |
+| Drift | Git과 클러스터 상태의 불일치 |
+| SelfHeal | 직접 변경된 리소스 자동 복구 |
+| Prune | Git에서 삭제된 리소스 자동 제거 |
+| Rollback | git revert를 통한 이전 상태 복구 |
